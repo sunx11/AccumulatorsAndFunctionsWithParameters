@@ -10,7 +10,7 @@ Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
 # Students: Read and run this program.
 #           Make sure that you understand all 3 examples.
 # ----------------------------------------------------------------------
-
+import math
 
 def main():
     """ Calls the other functions to demonstrate and/or test them. """
@@ -46,6 +46,7 @@ def example3():
     print('Running example3:')
     print('--------------------------------------------------')
     for k in range(6):
+
         print(1 + (3 * k))
 
 
