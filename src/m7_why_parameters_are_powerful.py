@@ -112,7 +112,7 @@ def better_draw_circles(n):
     window.close_on_mouse_click()
 
 # ----------------------------------------------------------------------
-# TODO: 3.
+# done: 3.
 #   In the previous exercise, you made a MORE POWERFUL version
 #   of draw_circles by introducing a PARAMETER for the amount by
 #   which the radii of the concentric circles increase.
