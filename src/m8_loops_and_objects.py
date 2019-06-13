@@ -14,6 +14,8 @@ import rosegraphics as rg
 
 def main():
     print_sequence1()
+    draw_circles1()
+    print_sequence2()
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
 
@@ -39,19 +41,20 @@ def print_sequence1():
     print('Running print_sequence1:')
     print('--------------------------------------------------')
     for k in range(21):
-        print(k*10)
 
+
+        print(k*10)
 
 def draw_circles1():
     """
     -- Constructs an rg.RoseWindow whose width and height are both 400.
     -- Constructs and draws 21 rg.Circle objects such that:
-         -- Each is centered at (200, 200)
-         -- They have radii:  0  10  20  30  40 ... 200, respectively.
+    -- Each is centered at (200, 200)
+    -- They have radii:  0  10  20  30  40 ... 200, respectively.
     -- Waits for the user to press the mouse, then closes the window.
-    """
+     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement this function, per its doc-string above.
+    # done: 3. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # HINT: You might find a prior module useful when 'writing' this code.
@@ -60,6 +63,15 @@ def draw_circles1():
     print('--------------------------------------------------')
     print('Running draw_circles1:  See graphics window')
     print('--------------------------------------------------')
+    window = rg.RoseWindow(400, 400)
+
+    center = rg.Point(200, 200)
+    for k in range(21):
+        circle = rg.Circle(center, 10 * k)
+        circle.attach_to(window)
+        window.render(0.05)  # Pauses for 0.05 seconds after rendering.
+
+    window.close_on_mouse_click()
 
 
 def print_sequence2():
@@ -82,6 +94,9 @@ def print_sequence2():
     print('--------------------------------------------------')
     print('Running print_sequence2:')
     print('--------------------------------------------------')
+    for k in range(18):
+        print(k * 20+50)
+
 
 
 def draw_circles2():
